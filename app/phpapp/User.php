@@ -6,8 +6,11 @@ namespace User;
 class User
 {
   private $_expenses = array();
+  private $_user_id;
+
   public function __construct()
   {
+    $this->_user_id = 3;
   }
 
   public function getID()
@@ -35,20 +38,13 @@ class User
 
   }
 
+  public function UpdateProfile($table, $data, $where, $type)
+  {
+    \Db\DbLayer\DbLayer::update($table, $data, $where, $type);
+  }
+
   public function UpdateExpense($table, $data, $type, $where)
   {
-    echo '<pre>';
-    print_r($where);
-    echo '</pre>';
-
-    echo '<pre>';
-    print_r($type);
-    echo '</pre>';
-
-    echo '<pre>';
-    print_r($data);
-    echo '</pre>';
-
     \Db\DbLayer\DbLayer::update('chicheng.users_expense', $data, $where, $type);
   }
 
@@ -58,9 +54,173 @@ class User
     $this->_expenses[] = new \Expense\Expense($data);
   }
 
+  public function DeleteCategory($id)
+  {
+    global $pdo_dbh;
+    $q = ' delete FROM chicheng.user_category
+where id = '.$id;
+    $sth = $pdo_dbh->prepare($q);
+    $sth->execute();
+    return true;
+  }
+
+  public function DeleteSubCategory($id)
+  {
+    global $pdo_dbh;
+    $q = ' delete FROM chicheng.user_subcategory
+where id = '.$id;
+    $sth = $pdo_dbh->prepare($q);
+    $sth->execute();
+    return true;
+  }
+
+  public function getUserCategory()
+  {
+    global $pdo_dbh;
+    $q = 'SELECT id, name FROM  chicheng.user_category
+where user_id = '.$this->_user_id;
+    $sth = $pdo_dbh->prepare($q);
+    $sth->execute();
+    $count = $sth->rowCount();
+    if($count > 0)  {
+      $res = array();
+      for($i=0; $i<$count; $i++)  {
+        $result = $sth->fetch(\PDO::FETCH_ASSOC);
+        $res[] = $result;
+      }
+      return $res;
+    }
+  }
+
+  public function getAllUsersParamters()
+  {
+    global $pdo_dbh;
+    $q = 'SELECT c.id as category_id, c.name,  group_concat(distinct ue.subcategory_id) as subcategory_ids, group_concat(distinct sc.name) as subcategory_names, 
+	group_concat(distinct ue.user_subcategory_id) as user_subcategories, group_concat(distinct uc.name) as user_subcategories_ids
+FROM chicheng.users_expense ue
+join chicheng.category c on c.id = ue.category_id
+left join chicheng.subcategory sc on sc.id = ue.subcategory_id
+left join chicheng.user_subcategory uc on uc.id = ue.user_subcategory_id
+where ue.user_id = '.$this->_user_id.' and ue.category_id is not null
+group by ue.category_id;';
+    $sth = $pdo_dbh->prepare($q);
+    $sth->execute();
+    $count = $sth->rowCount();
+    if($count > 0)  {
+      $res = array();
+      $res4 = array();
+      for($i=0; $i<$count; $i++)  {
+        $p = array();
+        $p4 = array();
+        $result = $sth->fetch(\PDO::FETCH_ASSOC);
+        if(!empty($result['subcategory_ids']) && !empty($result['subcategory_names'])){
+          if(strpos($result['subcategory_ids'], ",") > -1) {
+            $ids = explode(',', $result['subcategory_ids']);
+            $names = explode(',', $result['subcategory_names']);
+            $keys = array_keys($ids);
+            foreach ($keys as $k => $value) {
+              $p[$ids[$value]] = $names[$value];
+            }
+          }
+          else{
+            $p[$result['subcategory_ids']] = $result['subcategory_names'];
+          }
+        }
+
+        if(!empty($result['user_subcategories']) && !empty($result['user_subcategories_ids'])) {
+          if(strpos($result['user_subcategories_ids'], ",") > -1){
+            $ids = explode(',', $result['user_subcategories_ids']);
+            $names = explode(',', $result['user_subcategories']);
+            $keys = array_keys($ids);
+            foreach($keys as $k => $value){
+              $p4[$ids[$value]] = $names[$value];
+            }
+          }
+          else{
+            $p4[$result['user_subcategories_ids']] = $result['user_subcategories'];
+          }
+        }
+
+        $res[$result['category_id']]['name'] = $result['name'];
+        $res[$result['category_id']]['data'] = $p;
+
+        $res4[$result['category_id']]['name'] = $result['name'];
+        $res4[$result['category_id']]['data'] = $p4;
+
+      }
+
+    }
+
+
+    $q = 'SELECT uc.id as user_category_id, uc.name, group_concat(us.id) as sub_ids, group_concat(us.name) as sub_names FROM chicheng.users_expense ue
+join chicheng.user_category uc on uc.id = ue.user_category_id
+left join chicheng.user_subcategory us on us.id = ue.user_subcategory_id
+where ue.user_id = '.$this->_user_id.' and ue.user_category_id is not null
+group by ue.user_category_id;';
+    $sth = $pdo_dbh->prepare($q);
+    $sth->execute();
+    $count = $sth->rowCount();
+    if($count > 0)  {
+      $res2 = array();
+      for($i=0; $i<$count; $i++)  {
+        $p = array();
+        $result = $sth->fetch(\PDO::FETCH_ASSOC);
+        if(!empty($result['sub_ids']) && !empty($result['sub_names'])){
+          if(strpos($result['sub_ids'], ",") > -1){
+            $ids = explode(',', $result['sub_ids']);
+            $names = explode(',', $result['sub_names']);
+            $keys = array_keys($ids);
+            foreach($keys as $k => $value){
+              $p[$ids[$value]] = $names[$value];
+            }
+          }
+          else{
+            $p[$result['sub_ids']] = $result['sub_names'];
+          }
+        }
+        $res2[$result['user_category_id']]['name'] = $result['name'];
+        $res2[$result['user_category_id']]['data'] = $p;
+      }
+    }
+    return array('c_s'=>$res, 'c_us'=>$res4, 'uc_us'=>$res2);
+
+  }
+
+  public function getUserSubCategory()
+  {
+    global $pdo_dbh;
+    $q = 'SELECT a.*, b.name as category_name FROM chicheng.user_subcategory a
+join chicheng.category b on a.category_id = b.id
+where a.user_id = '.$this->_user_id.'
+union
+SELECT a.*, c.name as category_name  FROM chicheng.user_subcategory a
+join chicheng.user_category c on a.user_category_id = c.id 
+where a.user_id = '.$this->_user_id;
+    $sth = $pdo_dbh->prepare($q);
+    $sth->execute();
+    $count = $sth->rowCount();
+    if($count > 0)  {
+      $res = array();
+      for($i=0; $i<$count; $i++)  {
+        $result = $sth->fetch(\PDO::FETCH_ASSOC);
+        $res[$result['category_name']][] = $result;
+      }
+      return $res;
+    }
+  }
+
   public function getExpense()
   {
     return $this->_expenses;
+  }
+
+  public function RemoveExpense($id)
+  {
+    global $pdo_dbh;
+    $q = ' delete from chicheng.users_expense where id = '.$id .' and user_id ='.$this->_user_id;
+    $sth = $pdo_dbh->prepare($q);
+    $sth->execute();
+    return;
   }
 
   public static function authenticate($username, $password)

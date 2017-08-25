@@ -7,15 +7,17 @@ import {Observable} from 'rxjs/Rx';
 @Injectable()
 export class UserService
 {
+    http: Http;
     constructor(private http: Http)
     {
-    }
-    getData(){
-       return this.http
-            .get('app/test.json')
-            .map(response => response.json())
+        this.http = http;
     }
 
 
-    data= [1,2,3,4,5];
+
+    public UpdateProfile(firstname, lastname, email, gender)
+    {
+        console.log(firstname);
+    }
+
 }

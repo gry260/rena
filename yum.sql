@@ -78,7 +78,7 @@ CREATE TABLE `user_category` (
   `user_id` int(11) DEFAULT NULL,
   `name` varchar(245) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=304 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=329 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -87,7 +87,7 @@ CREATE TABLE `user_category` (
 
 LOCK TABLES `user_category` WRITE;
 /*!40000 ALTER TABLE `user_category` DISABLE KEYS */;
-INSERT INTO `user_category` VALUES (303,3,'jj'),(302,3,'kevin'),(301,3,'oo');
+INSERT INTO `user_category` VALUES (302,3,'2'),(303,3,'g');
 /*!40000 ALTER TABLE `user_category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -105,7 +105,7 @@ CREATE TABLE `user_subcategory` (
   `category_id` int(11) DEFAULT NULL,
   `user_category_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1083 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1168 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -114,7 +114,7 @@ CREATE TABLE `user_subcategory` (
 
 LOCK TABLES `user_subcategory` WRITE;
 /*!40000 ALTER TABLE `user_subcategory` DISABLE KEYS */;
-INSERT INTO `user_subcategory` VALUES (1076,3,'tttt',1,NULL),(1077,3,'poke',NULL,301),(1078,3,'poke',1,NULL),(1079,3,'mcale',NULL,302),(1080,3,'yumm',8,NULL),(1081,3,'feee',2,NULL),(1082,3,'yum',NULL,303);
+INSERT INTO `user_subcategory` VALUES (1077,3,'poke',NULL,301),(1079,3,'mcale',NULL,302),(1082,3,'yum',NULL,303),(1085,3,'ttt',NULL,316),(1086,3,'poke',NULL,319),(1087,3,'rr',NULL,320),(1145,3,'gggg',5,NULL),(1163,3,'poke',1,NULL),(1164,3,'kobe',NULL,303),(1165,3,'poke',1,NULL),(1166,3,'jj',1,NULL),(1167,3,'shaq',NULL,302);
 /*!40000 ALTER TABLE `user_subcategory` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -130,6 +130,10 @@ CREATE TABLE `users` (
   `user_key` varchar(145) DEFAULT NULL,
   `username` varchar(145) DEFAULT NULL,
   `password` varchar(145) DEFAULT NULL,
+  `first_name` varchar(145) DEFAULT NULL,
+  `last_name` varchar(145) DEFAULT NULL,
+  `email` varchar(145) DEFAULT NULL,
+  `gender` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -140,7 +144,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'e85c5cfe','asdf','4297f44b13955235245b2497399d7a93'),(2,'6d8cd69a','123123','5f4dcc3b5aa765d61d8327deb882cf99'),(3,'6c2312a1','1111','74b87337454200d4d33f80c4663dc5e5'),(4,'87c567b7','1111','74b87337454200d4d33f80c4663dc5e5'),(5,'83eb1fef','1111','74b87337454200d4d33f80c4663dc5e5'),(6,'4c49dcfa','1111','74b87337454200d4d33f80c4663dc5e5'),(7,'508f5621','1111','74b87337454200d4d33f80c4663dc5e5'),(8,'3587e24f','gry260','bb47b8c918c5da97a6aa5f0d673ebb95');
+INSERT INTO `users` VALUES (1,'e85c5cfe','asdf','4297f44b13955235245b2497399d7a93',NULL,NULL,NULL,NULL),(2,'6d8cd69a','123123','5f4dcc3b5aa765d61d8327deb882cf99',NULL,NULL,NULL,NULL),(3,'6c2312a1','1111','74b87337454200d4d33f80c4663dc5e5','ff','aa','gry2600@gmail.com','m'),(4,'87c567b7','1111','74b87337454200d4d33f80c4663dc5e5',NULL,NULL,NULL,NULL),(5,'83eb1fef','1111','74b87337454200d4d33f80c4663dc5e5',NULL,NULL,NULL,NULL),(6,'4c49dcfa','1111','74b87337454200d4d33f80c4663dc5e5',NULL,NULL,NULL,NULL),(7,'508f5621','1111','74b87337454200d4d33f80c4663dc5e5',NULL,NULL,NULL,NULL),(8,'3587e24f','gry260','bb47b8c918c5da97a6aa5f0d673ebb95',NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -164,7 +168,7 @@ CREATE TABLE `users_expense` (
   `date_entered` datetime DEFAULT NULL,
   `comment` varchar(245) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -173,7 +177,7 @@ CREATE TABLE `users_expense` (
 
 LOCK TABLES `users_expense` WRITE;
 /*!40000 ALTER TABLE `users_expense` DISABLE KEYS */;
-INSERT INTO `users_expense` VALUES (36,3,1,NULL,2,1081,'name','2015-06-12',123123,'2017-08-05 01:20:20','aaa'),(37,3,2,NULL,NULL,1081,'name','2015-06-12',13.12,'2017-08-05 00:53:55','comments'),(38,3,2,NULL,NULL,1081,'name','2015-06-12',13.12,'2017-08-04 00:48:21','comments'),(39,3,2,NULL,5,NULL,'name','2015-06-12',13.12,'2017-08-04 00:48:42','comments'),(40,3,2,NULL,NULL,NULL,'name','2015-06-12',13.12,'2017-08-04 00:50:21','comments'),(41,3,1,NULL,2,NULL,'name','2015-06-12',13.12,'2017-08-04 00:51:10','comments'),(42,3,2,NULL,NULL,NULL,'name','2015-06-12',13.12,'2017-08-04 00:51:22','comments'),(43,3,2,NULL,NULL,NULL,'name','2015-06-12',13.12,'2017-08-04 00:52:42','comments'),(44,3,2,NULL,NULL,NULL,'name','2015-06-12',13.12,'2017-08-04 00:53:20','comments'),(45,3,1,NULL,3,NULL,'name','2015-06-12',13.12,'2017-08-04 00:54:48','comments'),(46,3,2,NULL,NULL,NULL,'name','2015-06-12',13.12,'2017-08-04 00:55:20','comments'),(47,3,2,NULL,NULL,NULL,'name','2015-06-12',13.12,'2017-08-04 00:56:28','comments'),(48,3,2,NULL,NULL,NULL,'name','2015-06-12',13.12,'2017-08-04 00:57:14','comments'),(49,3,2,NULL,NULL,NULL,'name','2015-06-12',13.12,'2017-08-04 00:57:19','comments'),(50,3,2,NULL,5,NULL,'name','2015-06-12',13.12,'2017-08-04 00:58:09','comments'),(51,3,2,NULL,NULL,1081,'name','2015-06-12',13.12,'2017-08-04 00:58:17','comments'),(52,3,NULL,302,NULL,1079,'name','2015-06-12',13.12,'2017-08-04 00:59:19','comments'),(53,3,1,NULL,1,NULL,'name','2015-06-12',13.12,'2017-08-04 01:01:54','comments'),(54,3,2,NULL,NULL,1081,'name','2015-06-12',13.12,'2017-08-04 01:04:54','comments'),(55,3,1,NULL,2,NULL,'afasdf','2015-06-12',13.12,'2017-08-04 01:05:16','comments'),(56,3,2,NULL,NULL,1081,'name','2015-06-12',13.12,'2017-08-04 19:57:19','comments'),(57,3,2,NULL,NULL,1081,'name','2015-06-12',13.12,'2017-08-04 19:57:20','comments'),(58,3,1,NULL,2,NULL,'name','2015-06-12',13.12,'2017-08-04 20:57:58','comments'),(59,3,2,NULL,NULL,1081,'name','2015-06-12',13.12,'2017-08-04 20:59:34','comments'),(60,3,2,NULL,NULL,1081,'name','2015-06-12',13.12,'2017-08-05 00:42:44','comments'),(61,3,1,NULL,1,NULL,'name','2015-06-12',13.12,'2017-08-05 00:50:31','comments'),(62,3,1,NULL,1,NULL,'name','2015-06-12',3333,'2017-08-05 00:51:04','comments'),(63,3,1,NULL,1,NULL,'name','2015-06-12',13.12,'2017-08-05 00:55:09','klop'),(64,3,NULL,303,NULL,1082,'sdafasdf','2015-06-12',13.12,'2017-08-05 01:21:18','c');
+INSERT INTO `users_expense` VALUES (44,3,1,NULL,NULL,1165,'name','2015-06-12',13.12,'2017-08-04 00:53:20','comments'),(45,3,1,NULL,3,NULL,'name','2015-06-12',13.12,'2017-08-04 00:54:48','comments'),(47,3,2,NULL,NULL,NULL,'name','2015-06-12',13.12,'2017-08-04 00:56:28','comments'),(48,3,2,NULL,NULL,NULL,'name','2015-06-12',13.12,'2017-08-04 00:57:14','comments'),(50,3,2,NULL,5,NULL,'name','2015-06-12',13.12,'2017-08-04 00:58:09','comments'),(51,3,2,NULL,NULL,1081,'name','2015-06-12',13.12,'2017-08-04 00:58:17','comments'),(52,3,NULL,302,NULL,1145,'name','2015-06-12',13.12,'2017-08-04 00:59:19','comments'),(53,3,1,NULL,1,NULL,'name','2015-06-12',13.12,'2017-08-04 01:01:54','comments'),(54,3,2,NULL,NULL,1081,'name','2015-06-12',13.12,'2017-08-04 01:04:54','comments'),(55,3,1,NULL,2,NULL,'afasdf','2015-06-12',13.12,'2017-08-04 01:05:16','comments'),(56,3,2,NULL,NULL,1081,'name','2015-06-12',13.12,'2017-08-04 19:57:19','comments'),(57,3,2,NULL,NULL,1081,'name','2015-06-12',13.12,'2017-08-04 19:57:20','comments'),(58,3,1,NULL,2,NULL,'name','2015-06-12',13.12,'2017-08-04 20:57:58','comments'),(59,3,2,NULL,NULL,1081,'name','2015-06-12',13.12,'2017-08-04 20:59:34','comments'),(61,3,1,NULL,1,NULL,'name','2015-06-12',13.12,'2017-08-05 00:50:31','comments'),(62,3,1,NULL,1,NULL,'name','2015-06-12',3333,'2017-08-05 00:51:04','comments'),(63,3,1,NULL,1,NULL,'name','2015-06-12',13.12,'2017-08-05 00:55:09','klop'),(64,3,NULL,303,NULL,1164,'sdafasdf','2015-06-12',13.12,'2017-08-05 01:21:18','c'),(65,3,2,NULL,5,NULL,'name','2015-06-12',13.12,'2017-08-17 23:01:23','c'),(67,3,1,NULL,1,NULL,'name','2015-06-12',13.12,'2017-08-23 22:24:49','c2'),(68,3,2,NULL,NULL,1081,'name','2015-06-12',13.12,'2017-08-24 00:47:50','c'),(70,3,5,NULL,NULL,1083,'name','2015-06-12',13.12,'2017-08-24 02:14:12','c'),(71,3,1,NULL,4,NULL,'name','2015-06-12',13.12,'2017-08-25 01:08:32','cc'),(72,3,1,NULL,1,NULL,'name','2015-06-12',13.12,'2017-08-25 01:09:41','c'),(73,3,1,NULL,1,NULL,'name','2015-06-12',13.12,'2017-08-25 01:18:13','c'),(75,3,1,NULL,1,NULL,'name','2015-06-12',13.12,'2017-08-25 01:18:13','c'),(78,3,1,NULL,1,NULL,'name','2015-06-12',13.12,'2017-08-25 01:19:23','c'),(80,3,1,NULL,NULL,1166,'name','2015-06-12',13.12,'2017-08-26 00:13:10','c'),(81,3,NULL,302,NULL,1167,'name','2015-06-12',13.12,'2017-08-26 00:39:10','c');
 /*!40000 ALTER TABLE `users_expense` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -186,4 +190,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-04 16:23:08
+-- Dump completed on 2017-08-25 16:09:40

@@ -12,6 +12,10 @@ $loader->loadClass("Db\DbLayer");
 $instance = \Db\DB::getInstance();
 $pdo_dbh = $instance->getConnection();
 
+$loader->addNamespace('\User', $_SERVER['DOCUMENT_ROOT'] . '/app/phpapp');
+$loader->loadClass("\User");
+
+
 if (!empty($_GET['a']) && $_GET['a'] == 'addcategorytype') {
   $data = array('user_id' => $_GET['user_id'], 'name' => $_GET['name']);
   $types = array('user_id' => \PDO::PARAM_INT, 'name' => \PDO::PARAM_STR);
@@ -27,9 +31,9 @@ if (!empty($_GET['a']) && $_GET['a'] == 'addsubcategorytype') {
   $_GET['type'] == "c" ? $data['category_id'] = $_GET['category_id'] : false;
   $_GET['type'] == "u" ? $data['user_category_id'] = $_GET['category_id'] : false;
   $types = array('user_id' => \PDO::PARAM_INT, 'name' => \PDO::PARAM_STR, 'category_id' => \PDO::PARAM_INT, 'user_category_id' => \PDO::PARAM_INT);
-  \Db\DbLayer\DbLayer::insert('chicheng.user_subcategory', $data, $types);
-  header("Location:" . $_SERVER['DOCUMENT_ROOT']);
-  exit;
+  $id = \Db\DbLayer\DbLayer::insert('chicheng.user_subcategory', $data, $types);
+  echo $id;
+  return ;
 }
 
 if (!empty($_GET['a']) && $_GET['a'] == 'getsubcategory') {
@@ -54,8 +58,6 @@ if (!empty($_GET['a']) && ($_GET['a'] == 'addexpense' || $_GET['a'] == 'updateex
   isset($_GET['subcategory_id']) ? $data['subcategory_id'] = $_GET['subcategory_id'] : false;
   isset($_GET['user_category_id']) ? $data['user_category_id'] = $_GET['user_category_id'] : false;
   isset($_GET['user_subcategory_id']) ? $data['user_subcategory_id'] = $_GET['user_subcategory_id'] : false;
-  $loader->addNamespace('\User', $_SERVER['DOCUMENT_ROOT'] . '/app/phpapp');
-  $loader->loadClass("\User");
   $loader->addNamespace('\Expense', $_SERVER['DOCUMENT_ROOT'] . '/app/phpapp');
   $loader->loadClass("\Expense");
   $types = array('user_id' => \PDO::PARAM_INT, 'name' => \PDO::PARAM_STR, 'price' => \PDO::PARAM_STR,
@@ -77,7 +79,21 @@ if (!empty($_GET['a']) && ($_GET['a'] == 'addexpense' || $_GET['a'] == 'updateex
 }
 
 
+if(!empty($_GET['deleteusercategoryid'])){
+  $id = trim($_GET['deleteusercategoryid']);
+  $u = new \User\User();
+  $u->DeleteCategory($_GET['deleteusercategoryid']);
+}
 
+if(!empty($_GET['deleteusersubcategoryid'])){
+  $id = trim($_GET['deleteusersubcategoryid']);
+  $u = new \User\User();
+  $u->DeleteSubCategory($id);
+}
 
-
+if(!empty($_GET['a'] == 'removeexpenseid')) {
+  $id = trim($_GET['id']);
+  $u = new \User\User();
+  $u->RemoveExpense($id);
+}
 

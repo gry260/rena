@@ -1,3 +1,6 @@
+<h2>Expense</h2>
+
+
 <form [formGroup]="ExpenseForm" #Expenseform="ngForm"  (ngSubmit)="onSubmit(category, subcategory_obj, name, price, date, comment, id)">
     <select formControlName="category_obj" #category (change)="onChange(category.value, category)">
         <option *ngFor="let ii of ListCategories; let i = index" [value]="ii.id"  [ngClass]="ii.t" [ngValue]="ii.id">
@@ -18,9 +21,6 @@
     <button type="submit">Submit</button>
 </form>
 
-
-
-
 <ol>
     <li *ngFor="let item of ExpensesArray; ">
         {{ item.category_name }}&nbsp; &nbsp;&nbsp;
@@ -32,6 +32,7 @@
     {{ item.comment }}&nbsp; &nbsp;&nbsp;
         {{item.id}}
         <input type="button" name="update" value="update" (click)="searchExpenseById(item.id)" />
+        <button (click)="onDelete(item.id)">Delete</button>
     </li>
 </ol>
 

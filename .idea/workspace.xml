@@ -2,27 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4a2753e-696d-4111-88f2-adad0db279fd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/ExpenseType/Category.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/ExpenseType/CategoryTemplate.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/ExpenseType/ControllerActions.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/ExpenseType/Expense.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/ExpenseType/ExpenseTemplate.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/ExpenseType/SubCategory.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Form/FormBuilder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/app.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/db/DbLayer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/db/db.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/init.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/phpapp/Category.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/phpapp/Expense.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/phpapp/SubCategory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/phpapp/User.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/services/user.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.component.ts" afterPath="$PROJECT_DIR$/app/app.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.ts" afterPath="$PROJECT_DIR$/app/index.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system.config.js" afterPath="$PROJECT_DIR$/system.config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Search/Search.compoment.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Search/Search.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Users/Profile.components.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Users/Profile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Users/UserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.php" afterPath="$PROJECT_DIR$/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/ExpenseType/Category.ts" afterPath="$PROJECT_DIR$/app/ExpenseType/Category.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/ExpenseType/CategoryTemplate.php" afterPath="$PROJECT_DIR$/app/ExpenseType/CategoryTemplate.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/ExpenseType/ControllerActions.php" afterPath="$PROJECT_DIR$/app/ExpenseType/ControllerActions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/ExpenseType/Expense.ts" afterPath="$PROJECT_DIR$/app/ExpenseType/Expense.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/ExpenseType/ExpenseTemplate.php" afterPath="$PROJECT_DIR$/app/ExpenseType/ExpenseTemplate.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/ExpenseType/SubCategory.ts" afterPath="$PROJECT_DIR$/app/ExpenseType/SubCategory.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/ExpenseType/SubCategoryTemplate.php" afterPath="$PROJECT_DIR$/app/ExpenseType/SubCategoryTemplate.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.module.ts" afterPath="$PROJECT_DIR$/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/phpapp/User.php" afterPath="$PROJECT_DIR$/app/phpapp/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/expense.ts" afterPath="$PROJECT_DIR$/app/services/expense.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/user.ts" afterPath="$PROJECT_DIR$/app/services/user.ts" />
     </list>
     <ignored path="chi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,35 +39,65 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Category.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/ExpenseType/Category.ts">
+      <file leaf-file-name="Search.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Search/Search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="56" column="5" lean-forward="true" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#59#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExpenseTemplate.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/ExpenseType/ExpenseTemplate.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="102" lean-forward="false" selection-start-line="0" selection-start-column="102" selection-end-line="0" selection-end-column="102" />
+            <state relative-caret-position="136">
+              <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControllerActions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/ExpenseType/ControllerActions.php">
+      <file leaf-file-name="Search.compoment.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Search/Search.compoment.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+            <state relative-caret-position="85">
+              <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Users/UserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Register.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Users/Register.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="13" column="28" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="1" />
               <folding>
-                <marker date="1501886412599" expanded="true" signature="1202:1234" ph="..." />
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/app.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#46#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -79,68 +106,43 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/phpapp/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="265">
+              <caret line="169" column="52" lean-forward="true" selection-start-line="169" selection-start-column="52" selection-end-line="169" selection-end-column="52" />
               <folding>
-                <marker date="1501886724831" expanded="true" signature="997:1077" ph="select * fro... users" />
+                <marker date="1503702333118" expanded="true" signature="913:959" ph="delete FROM " />
+                <marker date="1503702333118" expanded="true" signature="1120:1169" ph="delete FROM " />
+                <marker date="1503702333118" expanded="true" signature="1324:1385" ph="SELECT id, n... user_category" />
+                <marker date="1503702333118" expanded="true" signature="1760:2294" ph="SELECT c.id users_expense" />
+                <marker date="1503702333118" expanded="true" signature="1760:2349" ph="SELECT c.id users_expense" />
+                <marker date="1503702333118" expanded="true" signature="4026:4320" ph="SELECT uc.id... users_expense" />
+                <marker date="1503702333118" expanded="true" signature="4026:4340" ph="SELECT uc.id... users_expense" />
+                <marker date="1503702333118" expanded="true" signature="4026:4405" ph="SELECT uc.id... users_expense" />
+                <marker date="1503702333118" expanded="true" signature="5419:5555" ph="SELECT a.*, user_subcategory" />
+                <marker date="1503702333118" expanded="true" signature="5419:5729" ph="SELECT a.*, " />
+                <marker date="1503702333118" expanded="true" signature="5581:5729" ph="SELECT a.*, user_subcategory" />
+                <marker date="1503702333118" expanded="true" signature="6196:6264" ph="delete from " />
+                <marker date="1503702333118" expanded="true" signature="6450:6530" ph="select * fro... users" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DbLayer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/db/DbLayer.php">
+      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/app.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="35" column="32" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
-              <folding>
-                <marker date="1501886384465" expanded="true" signature="267:290" ph="insert into ${$table}... " />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Category.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/phpapp/Category.php">
+      <file leaf-file-name="UserActions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Users/UserActions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="69" column="26" lean-forward="true" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
-              <folding>
-                <marker date="1501798447849" expanded="true" signature="581:630" ph="SELECT id, n... category" />
-                <marker date="1501798447849" expanded="true" signature="581:708" ph="select * fro... category" />
-                <marker date="1501798447849" expanded="true" signature="637:708" ph="SELECT id, n... user_category" />
-                <marker date="1501798447849" expanded="true" signature="1118:1185" ph="select * fro... subcategory" />
-                <marker date="1501798447849" expanded="true" signature="1118:1196" ph="select *, &quot;c... subcategory" />
-                <marker date="1501798447849" expanded="true" signature="1118:1272" ph="select *, &quot;c... " />
-                <marker date="1501798447849" expanded="true" signature="1118:1321" ph="select *, &quot;c... " />
-                <marker date="1501798447849" expanded="true" signature="1203:1231" ph="SELECT id, n... " />
-                <marker date="1501798447849" expanded="true" signature="1203:1272" ph="SELECT id, n... user_subcategory" />
-                <marker date="1501798447849" expanded="true" signature="1531:1659" ph="SELECT id, n... user_subcategory" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="expense.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/services/expense.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="41" column="14" lean-forward="true" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#82#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Expense.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/ExpenseType/Expense.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-731">
-              <caret line="32" column="22" lean-forward="true" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#64#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="374">
+              <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,6 +161,13 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>console</find>
+      <find>categoryTypeForm</find>
+      <find>loadClass</find>
+      <find>.push</find>
+      <find>categorySubTypeForm</find>
+      <find>formgroup</find>
+      <find>require</find>
+      <find>updateP</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -171,12 +180,10 @@
         <option value="$PROJECT_DIR$/app/register.ts" />
         <option value="$PROJECT_DIR$/app/register.html" />
         <option value="$PROJECT_DIR$/app/form/Form.php" />
-        <option value="$PROJECT_DIR$/app/Psr4AutoloaderClass.php" />
         <option value="$PROJECT_DIR$/app/test.html" />
         <option value="$PROJECT_DIR$/app/RegisterAction.php" />
         <option value="$PROJECT_DIR$/app/test.json" />
         <option value="$PROJECT_DIR$/system.config.js" />
-        <option value="$PROJECT_DIR$/app/services/user.ts" />
         <option value="$PROJECT_DIR$/app/register.component.ts" />
         <option value="$PROJECT_DIR$/app/db/DB.php" />
         <option value="$PROJECT_DIR$/app/register.php" />
@@ -191,23 +198,30 @@
         <option value="$PROJECT_DIR$/home.php" />
         <option value="$PROJECT_DIR$/app/app.component.ts" />
         <option value="$PROJECT_DIR$/app/Form/FormBuilder.php" />
-        <option value="$PROJECT_DIR$/app/init.php" />
         <option value="$PROJECT_DIR$/app/ExpenseType/Expense.js" />
-        <option value="$PROJECT_DIR$/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/app/ExpenseType/SubCategoryTemplate.php" />
-        <option value="$PROJECT_DIR$/app/ExpenseType/CategoryTemplate.php" />
-        <option value="$PROJECT_DIR$/app/ExpenseType/Category.ts" />
-        <option value="$PROJECT_DIR$/app/ExpenseType/SubCategory.ts" />
         <option value="$PROJECT_DIR$/app/phpapp/SubCategory.php" />
-        <option value="$PROJECT_DIR$/app.php" />
         <option value="$PROJECT_DIR$/app/phpapp/Expense.php" />
-        <option value="$PROJECT_DIR$/app/phpapp/Category.php" />
-        <option value="$PROJECT_DIR$/app/services/expense.ts" />
         <option value="$PROJECT_DIR$/app/db/DbLayer.php" />
-        <option value="$PROJECT_DIR$/app/ExpenseType/ControllerActions.php" />
-        <option value="$PROJECT_DIR$/app/phpapp/User.php" />
+        <option value="$PROJECT_DIR$/app/init.php" />
+        <option value="$PROJECT_DIR$/app/Psr4AutoloaderClass.php" />
+        <option value="$PROJECT_DIR$/app/phpapp/Category.php" />
+        <option value="$PROJECT_DIR$/app/ExpenseType/Category.ts" />
+        <option value="$PROJECT_DIR$/app/ExpenseType/SubCategoryTemplate.php" />
+        <option value="$PROJECT_DIR$/app/ExpenseType/SubCategory.ts" />
         <option value="$PROJECT_DIR$/app/ExpenseType/ExpenseTemplate.php" />
+        <option value="$PROJECT_DIR$/app/services/expense.ts" />
+        <option value="$PROJECT_DIR$/app/ExpenseType/ControllerActions.php" />
         <option value="$PROJECT_DIR$/app/ExpenseType/Expense.ts" />
+        <option value="$PROJECT_DIR$/app/ExpenseType/CategoryTemplate.php" />
+        <option value="$PROJECT_DIR$/app/services/user.ts" />
+        <option value="$PROJECT_DIR$/app/Users/Profile.components.ts" />
+        <option value="$PROJECT_DIR$/app/Users/Profile.php" />
+        <option value="$PROJECT_DIR$/app/Users/UserController.php" />
+        <option value="$PROJECT_DIR$/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/app/Search/Search.compoment.ts" />
+        <option value="$PROJECT_DIR$/app/Search/Search.php" />
+        <option value="$PROJECT_DIR$/app/phpapp/User.php" />
+        <option value="$PROJECT_DIR$/app.php" />
       </list>
     </option>
   </component>
@@ -228,9 +242,9 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="149" />
-    <option name="y" value="141" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="148" />
+    <option name="y" value="167" />
     <option name="width" value="1696" />
     <option name="height" value="1179" />
   </component>
@@ -290,6 +304,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -306,31 +321,13 @@
               <item name="chi" type="b2602c69:ProjectViewProjectNode" />
               <item name="chi" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="db" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="chi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chi" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ExpenseType" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="chi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chi" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Form" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="chi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chi" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="phpapp" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="chi" type="b2602c69:ProjectViewProjectNode" />
               <item name="chi" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="services" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Search" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="chi" type="b2602c69:ProjectViewProjectNode" />
@@ -342,7 +339,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -352,6 +348,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="nodejs_interpreter_path" value="C:/Program Files (x86)/nodejs/node" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../eap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -419,19 +416,50 @@
       <workItem from="1501542887977" duration="25564000" />
       <workItem from="1501778663438" duration="15771000" />
       <workItem from="1501871851655" duration="8630000" />
+      <workItem from="1502816214457" duration="158000" />
+      <workItem from="1502817182728" duration="189000" />
+      <workItem from="1502836478829" duration="122000" />
+      <workItem from="1502908600181" duration="244000" />
+      <workItem from="1503003647024" duration="594000" />
+      <workItem from="1503440005255" duration="605000" />
+      <workItem from="1503442966542" duration="898000" />
+      <workItem from="1503444885465" duration="617000" />
+      <workItem from="1503510475349" duration="594000" />
+      <workItem from="1503512029915" duration="1069000" />
+      <workItem from="1503519882160" duration="1796000" />
+      <workItem from="1503521711908" duration="2260000" />
+      <workItem from="1503524758254" duration="1565000" />
+      <workItem from="1503526578092" duration="1790000" />
+      <workItem from="1503528846960" duration="704000" />
+      <workItem from="1503531132189" duration="1658000" />
+      <workItem from="1503533276127" duration="1784000" />
+      <workItem from="1503535101320" duration="1787000" />
+      <workItem from="1503536909738" duration="2344000" />
+      <workItem from="1503593612248" duration="117000" />
+      <workItem from="1503606464765" duration="1817000" />
+      <workItem from="1503608325890" duration="1446000" />
+      <workItem from="1503610212061" duration="2094000" />
+      <workItem from="1503612407304" duration="1854000" />
+      <workItem from="1503614290490" duration="1778000" />
+      <workItem from="1503616104366" duration="1781000" />
+      <workItem from="1503618315626" duration="2083000" />
+      <workItem from="1503620551892" duration="1322000" />
+      <workItem from="1503685464587" duration="1920000" />
+      <workItem from="1503696072893" duration="1791000" />
+      <workItem from="1503699711088" duration="1773000" />
+      <workItem from="1503701518051" duration="840000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122211000" />
+    <option name="totallyTimeSpent" value="163605000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20415647" sideWeight="0.67106843" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30012226" sideWeight="0.67106843" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27964205" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -447,6 +475,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32893157" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -496,48 +525,12 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/test.html" />
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/init.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Psr4AutoloaderClass.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3060">
-          <caret line="180" column="24" lean-forward="false" selection-start-line="180" selection-start-column="24" selection-end-line="180" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Form/FormBuilder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="25" column="3" lean-forward="false" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/register.component.ts" />
     <entry file="file://$PROJECT_DIR$/app/register.php" />
     <entry file="file://$PROJECT_DIR$/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -546,7 +539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -554,7 +546,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -562,7 +553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="180" column="24" lean-forward="false" selection-start-line="180" selection-start-column="24" selection-end-line="180" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -577,25 +567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="26" column="10" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/user.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#47#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Users/Register.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -606,21 +577,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Psr4AutoloaderClass.php">
+    <entry file="file://$PROJECT_DIR$/home.php" />
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1671">
-          <caret line="172" column="6" lean-forward="true" selection-start-line="172" selection-start-column="6" selection-end-line="172" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Users/Login.components.ts">
+    <entry file="file://$PROJECT_DIR$/app/ExpenseType/Expense.js" />
+    <entry file="file://$PROJECT_DIR$/app/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="3" column="38" lean-forward="false" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -628,31 +597,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Users/Register.php">
+    <entry file="file://$PROJECT_DIR$/app/init.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="85">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home.php" />
-    <entry file="file://$PROJECT_DIR$/app/index.ts">
+    <entry file="file://$PROJECT_DIR$/app/Psr4AutoloaderClass.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="38" lean-forward="true" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+        <state relative-caret-position="1360">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/app/phpapp/SubCategory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="629">
+          <caret line="42" column="3" lean-forward="false" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -660,41 +625,93 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Users/UserActions.php">
+    <entry file="file://$PROJECT_DIR$/app/phpapp/Expense.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="57" lean-forward="false" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="71" />
-          <folding>
-            <element signature="e#207#377#0#PHP" expanded="false" />
-            <element signature="e#294#373#0#PHP" expanded="false" />
-            <element signature="e#826#905#0#PHP" expanded="false" />
-          </folding>
+        <state relative-caret-position="554">
+          <caret line="69" column="59" lean-forward="false" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/init.php">
+    <entry file="file://$PROJECT_DIR$/app/phpapp/Category.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="578">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.component.ts">
+    <entry file="file://$PROJECT_DIR$/app/ExpenseType/ExpenseTemplate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="697">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/ExpenseType/Expense.js" />
+    <entry file="file://$PROJECT_DIR$/app/ExpenseType/Expense.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Users/Register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Users/Login.components.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ExpenseType/Category.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="65" column="3" lean-forward="true" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ExpenseType/CategoryTemplate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/expense.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="60" column="89" lean-forward="false" selection-start-line="60" selection-start-column="89" selection-end-line="60" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/user.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Users/Profile.components.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ExpenseType/SubCategory.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/db/DB.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -703,90 +720,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/ExpenseType/SubCategoryTemplate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ExpenseType/SubCategory.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ExpenseType/CategoryTemplate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/phpapp/SubCategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="42" column="3" lean-forward="false" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/phpapp/Expense.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="65" column="41" lean-forward="true" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
-          <folding>
-            <marker date="1501794555211" expanded="true" signature="1692:2224" ph="SELECT *, if... users_expense" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/phpapp/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="69" column="26" lean-forward="true" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
-          <folding>
-            <marker date="1501798447849" expanded="true" signature="581:630" ph="SELECT id, n... category" />
-            <marker date="1501798447849" expanded="true" signature="581:708" ph="select * fro... category" />
-            <marker date="1501798447849" expanded="true" signature="637:708" ph="SELECT id, n... user_category" />
-            <marker date="1501798447849" expanded="true" signature="1118:1185" ph="select * fro... subcategory" />
-            <marker date="1501798447849" expanded="true" signature="1118:1196" ph="select *, &quot;c... subcategory" />
-            <marker date="1501798447849" expanded="true" signature="1118:1272" ph="select *, &quot;c... " />
-            <marker date="1501798447849" expanded="true" signature="1118:1321" ph="select *, &quot;c... " />
-            <marker date="1501798447849" expanded="true" signature="1203:1231" ph="SELECT id, n... " />
-            <marker date="1501798447849" expanded="true" signature="1203:1272" ph="SELECT id, n... user_subcategory" />
-            <marker date="1501798447849" expanded="true" signature="1531:1659" ph="SELECT id, n... user_subcategory" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/db/DbLayer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="510">
           <caret line="35" column="32" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
           <folding>
             <marker date="1501886384465" expanded="true" signature="267:290" ph="insert into ${$table}... " />
@@ -794,61 +730,116 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/phpapp/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding>
-            <marker date="1501886724831" expanded="true" signature="997:1077" ph="select * fro... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/ExpenseType/ControllerActions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding>
-            <marker date="1501886412599" expanded="true" signature="1202:1234" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/expense.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="41" column="14" lean-forward="true" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ExpenseType/Category.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="56" column="5" lean-forward="true" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ExpenseType/ExpenseTemplate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="102" lean-forward="false" selection-start-line="0" selection-start-column="102" selection-end-line="0" selection-end-column="102" />
+        <state relative-caret-position="102">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/ExpenseType/Expense.ts">
+    <entry file="file://$PROJECT_DIR$/app/ExpenseType/SubCategoryTemplate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-731">
-          <caret line="32" column="22" lean-forward="true" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+        <state relative-caret-position="68">
+          <caret line="4" column="68" lean-forward="false" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Users/Profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Users/UserActions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Search/Search.compoment.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <element signature="e#0#64#0" expanded="true" />
+            <element signature="e#0#46#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Users/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Users/Register.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="28" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/phpapp/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="169" column="52" lean-forward="true" selection-start-line="169" selection-start-column="52" selection-end-line="169" selection-end-column="52" />
+          <folding>
+            <marker date="1503702333118" expanded="true" signature="913:959" ph="delete FROM " />
+            <marker date="1503702333118" expanded="true" signature="1120:1169" ph="delete FROM " />
+            <marker date="1503702333118" expanded="true" signature="1324:1385" ph="SELECT id, n... user_category" />
+            <marker date="1503702333118" expanded="true" signature="1760:2294" ph="SELECT c.id users_expense" />
+            <marker date="1503702333118" expanded="true" signature="1760:2349" ph="SELECT c.id users_expense" />
+            <marker date="1503702333118" expanded="true" signature="4026:4320" ph="SELECT uc.id... users_expense" />
+            <marker date="1503702333118" expanded="true" signature="4026:4340" ph="SELECT uc.id... users_expense" />
+            <marker date="1503702333118" expanded="true" signature="4026:4405" ph="SELECT uc.id... users_expense" />
+            <marker date="1503702333118" expanded="true" signature="5419:5555" ph="SELECT a.*, user_subcategory" />
+            <marker date="1503702333118" expanded="true" signature="5419:5729" ph="SELECT a.*, " />
+            <marker date="1503702333118" expanded="true" signature="5581:5729" ph="SELECT a.*, user_subcategory" />
+            <marker date="1503702333118" expanded="true" signature="6196:6264" ph="delete from " />
+            <marker date="1503702333118" expanded="true" signature="6450:6530" ph="select * fro... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Search/Search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>

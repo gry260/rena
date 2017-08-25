@@ -69,7 +69,6 @@ export class ExpenseComponent {
 
   onSubmit(c, subcategory_obj, name, price,date, comment, id) {
 
-
     var SubmittedObj = {
       user_id: 3,
       id: id.value != null ? id.value : null,
@@ -118,6 +117,16 @@ export class ExpenseComponent {
     return true;
   }
 
+  onDelete(id){
+    this.ExpenseService.removeExpense(id).subscribe(data => {
+      for (var i in this.ExpensesArray) {
+        if(this.ExpensesArray[i].id == id){
+          this.ExpensesArray.splice(i, 1);
+          return;
+        }
+      }
+    });
+  }
 
   searchExpenseById(ExpenseID) {
     for (var i in this.ExpensesArray) {

@@ -51,18 +51,17 @@ export class ExpenseService {
 
   addExpenseType(data) {
     this.http.get('app/ExpenseType/ControllerActions.php?a=addcategorytype&user_id=3&name=' + data.name).map((res: Response) => res.text()).subscribe(data => {
-      this.text = data;
-      console.log(this.text.trim());
     }, error => {
       console.log(error.json());
     });
   }
 
+  removeExpense(id)
+  {
+    return this.http.get('app/ExpenseType/ControllerActions.php?a=removeexpenseid&id='+id).map((res: Response) => res.text());
+  }
+
   addExpenseSubCategoryType(data) {
-    return this.http.get('app/ExpenseType/ControllerActions.php?a=addsubcategorytype&user_id=3&type=' + data.type + '&category_id=' + data.category_id + '&name=' + data.name).subscribe(data => {
-      console.log(data);
-    }, error => {
-      console.log(error.json());
-    });
+    return this.http.get('app/ExpenseType/ControllerActions.php?a=addsubcategorytype&user_id=3&type=' + data.type + '&category_id=' + data.category_id + '&name=' + data.name).map((res: Response) => res.text());
   }
 }
