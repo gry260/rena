@@ -1,6 +1,22 @@
 import {Http, Response, Headers, RequestOptions, HttpModule} from "@angular/http";
-import {Injectable} from '@angular/core';
+import {Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
+
+import { Observable } from 'rxjs/Observable';
+
+// Observable class extensions
+import 'rxjs/add/observable/of';
+import 'rxjs/add/observable/throw';
+
+// Observable operators
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/switchMap';
+
 
 @Injectable()
 export class ExpenseService {
@@ -11,6 +27,29 @@ export class ExpenseService {
 
   constructor(private h: Http) {
     this.http = h;
+  }
+
+  SearchReports(parameters, food): Observable<any>
+  {
+
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    let body = JSON.stringify(parameters);
+
+    return this.http.post('app/Search/SearchSubmit.php?a=1', body, options)
+      .map(res => {
+        res => res.text();
+        console.log(res.text());
+      }).subscribe(
+
+      );
+    //let bodyString = JSON.stringify(parameters); // Stringify payload
+    this.http.get('app/Search/SearchSubmit.php').map(res => {
+      res => res.text();
+      console.log(res.text());
+    }).subscribe(
+
+    );
   }
 
   GetSubCategory(category_id, type) {

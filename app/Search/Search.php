@@ -1,8 +1,4 @@
-
-
-
-
-<br /><br /><br />
+<br/><br/><br/>
 
 <h2>Search</h2>
 
@@ -17,104 +13,79 @@
 
 -->
 
-
-
-<ul *ngFor="let item of p; let i = index">
-    <input type="checkbox" />
+<form [formGroup]="SearchForm" #s="ngForm">
+    <ul *ngFor="let item of p; let i = index" #category (click)="OnClickUpdateCategory(item.category_id, item.user_category_id, i, ccategory_checkbox)">
+        <input type="checkbox" #ccategory_checkbox />
         {{ item.name }}
+        <div *ngIf="p3[i]" #sc3>
+            <li *ngFor="let s of p3[i]; let j = index" style="margin-left: 50px;" #subcategory>
+                <input type="checkbox"/>
+                {{s.name}}
+            </li>
+        </div>
+    </ul>
 
-    <div *ngIf="p3[i]">
-        <li *ngFor="let s of p3[i]; let j = index" style="margin-left: 50px;">
-            <input type="checkbox" />
-            {{s.name}}
-        </li>
-    </div>
-</ul>
+    <label>Name</label>
+    <br/>
+    <input type="text" formControlName="name" name="name" (keyup)="OnClickUpdateName(name.value)" #name  />
+    <br/><br/>
+    <label>Price</label>
+    <br/>
+    <select name="poperator1" formControlName="poperator1" #poperator1>
+        <option>≈</option>
+        <option>=</option>
+        <option><</option>
+        <option>></option>
+    </select>
+    <input type="text" name="price1"  formControlName="price1" #price1 (input)="OnClickUpdatePrice(poperator1.value, price1.value, 0)" />
+    AND
+    <select name="poperator2" formControlName="poperator2" #poperator2>
+        <option>≈</option>
+        <option>=
+        </option>
+        <option>
+            <
+        </option>
+        <option>
+            >
+        </option>
+    </select>
+    <input type="text" name="price2"  formControlName="price2" #price2 (keyup)="OnClickUpdatePrice(poperator2.value, price2.value, 1)"/>
+    <br/><br/>
+    <label>Time</label>
+    <br/>
+    <select name="last_name" #lasttime (change)="OnChangeLastTime(lasttime.value)">
+        <option>This Month</option>
+        <option>Last Month</option>
+        <option>Last 3 Months</option>
+        <option>This Year</option>
+    </select>
 
-<label>Name</label>
-<br />
- <input type="text" />
+    &nbsp; &nbsp;&nbsp;&nbsp;
+    <label>Since</label>
+    <input type="text" #from (change)="OnChangeFromDate(from.value)"/>
 
-<br /><br />
-<label>Price</label>
-<br />
-<select>
-    <option>
-        =
-    </option>
-    <option>
-        <
-    </option>
-    <option>
-        >
-    </option>
-</select>
-<input type="text" />
-
-
-AND
-<select>
-    <option>
-        =
-    </option>
-    <option>
-        <
-    </option>
-    <option>
-        >
-    </option>
-</select>
-<input type="text" />
-
-<br /><br />
-<label>Time</label>
-<br />
-<select>
-    <option>This Month</option>
-    <option>Last Month</option>
-    <option>Last 3 Months</option>
-    <option>This Year</option>
-</select>
+    <label>Before</label>
+    <input type="text" #end (change)="OnChangeEndDate(end.value)"/>
 
 
-&nbsp; &nbsp;&nbsp;&nbsp;
-<label>Year</label>
-<select>
-    <option>2017</option>
-    <option>2016</option>
-</select>
+    <!--
+    <br/>
+    By
 
-<label>Months</label>
-<select>
-<option>
-    Janruary
-</option>
-</select>
+    <input type="checkbox"/>
+    Category
 
 
-&nbsp; &nbsp;&nbsp;&nbsp;
-<label>From</label>
-<input type="text"/>
+    <input type="checkbox"/>
+    SubCategory
 
-<label>To</label>
-<input type="text"/>
-
-<br />
-By
-
-<input type="checkbox" />
-Category
+    <input type="checkbox"/>
+    Item Name
+    -->
 
 
-<input type="checkbox" />
-SubCategory
-
-<input type="checkbox"/>
-Item Name
-
-<input type="checkbox" />
-Days
-
+</form>
 
 
 
