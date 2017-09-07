@@ -6,17 +6,21 @@
  * Time: 6:29 PM
  */
 
-echo 'asdf';
-
-echo '<pre>';
-print_r(getallheaders());
-echo '</pre>';
-
-
 $data = json_decode(file_get_contents('php://input'), true);
-print_r($data);
-
-
 echo '<pre>';
-print_r($_REQUEST);
+print_r($data);
 echo '</pre>';
+
+$keys = array('category_ids', 'name', 'price', '');
+
+$q = ' and ';
+if(!empty($data['category_ids']) && is_array($data['category_ids'])){
+    foreach($data['category_ids'] as $key => $val){
+        if($val["type"] == "c"){
+            $q .= 'category_id='.$val["id"];
+        }
+    }
+}
+
+
+echo $q;
