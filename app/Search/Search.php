@@ -19,7 +19,7 @@
         {{ item.name }}
         <div *ngIf="p3[i]" #sc3>
             <li *ngFor="let s of p3[i]; let j = index" style="margin-left: 50px;" #subcategory>
-                <input type="checkbox" (click)="OnCLickUpdateSubCategory(item.category_id, item.user_category_id,  s.id, s.type, i)"/>
+                <input type="checkbox" (click)="OnCLickUpdateSubCategory(item.category_id, item.user_category_id,  s.id, s.type, i, subcategory)"/>
                 {{s.name}}
             </li>
         </div>

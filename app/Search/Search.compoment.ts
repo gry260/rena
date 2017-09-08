@@ -80,6 +80,11 @@ export class SearchComponent {
     }
 
     OnClickUpdateCategory(category_id, user_category_id, index, ccategory_checkbox) {
+
+
+        console.log( this.Options.subcategory_ids);
+
+/*
         if(this.Options.subcategory_ids.length > 0){
             for(var k in this.Options.subcategory_ids){
                 if(this.Options.subcategory_ids[k].category_id !== undefined){
@@ -95,9 +100,6 @@ export class SearchComponent {
                 }
             }
         }
-
-
-
 
         if (ccategory_checkbox.checked == true) {
             if (category_id !== undefined) {
@@ -127,9 +129,10 @@ export class SearchComponent {
 
 
         this.ExpenseServices.SearchReports(this.Options);
+        */
     }
 
-    OnCLickUpdateSubCategory(category_id, user_category_id, id, type, category_index) {
+    OnCLickUpdateSubCategory(category_id, user_category_id, id, type, category_index, subcategory) {
         if (this.s._results[category_index].nativeElement.parentElement.children[0].checked == true) {
             this.s._results[category_index].nativeElement.parentElement.children[0].checked = false;
         }
@@ -143,16 +146,22 @@ export class SearchComponent {
             }
         }
 
-        this.Options.subcategory_ids.push({
-            id: id,
-            type: type,
-            category_id: category_id,
-            user_category_id: user_category_id,
-        });
-
-        console.log(this.Options.subcategory_ids);
+        if(subcategory.children[0].checked == true) {
+            this.Options.subcategory_ids.push({
+                id: id,
+                type: type,
+                category_id: category_id,
+                user_category_id: user_category_id,
+            });
+        }
+        else if(subcategory.children[0].checked == false) {
+            for(var k in this.Options.subcategory_ids){
+                if(this.Options.subcategory_ids[k].id == id){
+                    this.Options.subcategory_ids.splice(k, 1);
+                }
+            }
+        }
         this.ExpenseServices.SearchReports(this.Options);
-
     }
 
 
