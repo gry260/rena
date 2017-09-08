@@ -29,14 +29,14 @@ export class ExpenseService {
     this.http = h;
   }
 
-  SearchReports(parameters, food): Observable<any>
+  SearchReports(parameters): Observable<any>
   {
 
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
     let body = JSON.stringify(parameters);
 
-    return this.http.post('app/Search/SearchSubmit.php?a=1', body, options)
+    return this.http.post('app/Search/SearchSubmit.php', body, options)
       .map(res => {
         res => res.text();
         console.log(res.text());

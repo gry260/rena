@@ -14,12 +14,12 @@
 -->
 
 <form [formGroup]="SearchForm" #s="ngForm">
-    <ul *ngFor="let item of p; let i = index" #category (click)="OnClickUpdateCategory(item.category_id, item.user_category_id, i, ccategory_checkbox)">
-        <input type="checkbox" #ccategory_checkbox />
+    <ul *ngFor="let item of p; let i = index" #category>
+        <input type="checkbox" #ccategory_checkbox (click)="OnClickUpdateCategory(item.category_id, item.user_category_id, i, ccategory_checkbox)" />
         {{ item.name }}
         <div *ngIf="p3[i]" #sc3>
             <li *ngFor="let s of p3[i]; let j = index" style="margin-left: 50px;" #subcategory>
-                <input type="checkbox"/>
+                <input type="checkbox" (click)="OnCLickUpdateSubCategory(item.category_id, item.user_category_id,  s.id, s.type, i)"/>
                 {{s.name}}
             </li>
         </div>
@@ -58,7 +58,9 @@
         <option>This Month</option>
         <option>Last Month</option>
         <option>Last 3 Months</option>
+        <option>Last 6 Months</option>
         <option>This Year</option>
+        <option>Last Year</option>
     </select>
 
     &nbsp; &nbsp;&nbsp;&nbsp;

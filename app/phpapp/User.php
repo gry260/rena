@@ -180,16 +180,13 @@ group by ue.user_category_id;';
             $p[$result['sub_ids']] = $result['sub_names'];
           }
         }
+        $res[$last_counter][0]['type'] = 'us';
         $res[$last_counter]['user_category_id'] = $result['user_category_id'];
         $res[$last_counter]['name'] = $result['name'];
         $res[$last_counter][0]['data'] = $p;
         $last_counter++;
       }
     }
-
-    echo '<pre>';
-    print_r($res);
-    echo '</pre>';
     return $res;
 
   }
