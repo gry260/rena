@@ -81,6 +81,17 @@ export class SearchComponent {
     }
 
     OnClickUpdateCategory(category_id, user_category_id, index, ccategory_checkbox) {
+<<<<<<< HEAD
+=======
+
+
+        console.log( this.Options.subcategory_ids);
+
+/*
+        if(this.Options.subcategory_ids.length > 0){
+            for(var k in this.Options.subcategory_ids){
+                if(this.Options.subcategory_ids[k].category_id !== undefined){
+>>>>>>> 8aab7b3d571146cc2e9172696e283646ae5085fa
 
 
         var temp = this.Options.subcategory_ids;
@@ -122,11 +133,16 @@ export class SearchComponent {
         }
 
         this.ExpenseServices.SearchReports(this.Options);
+        */
     }
 
+<<<<<<< HEAD
     OnCLickUpdateSubCategory(category_id, user_category_id, id, type, category_index, sc) {
 
 
+=======
+    OnCLickUpdateSubCategory(category_id, user_category_id, id, type, category_index, subcategory) {
+>>>>>>> 8aab7b3d571146cc2e9172696e283646ae5085fa
         if (this.s._results[category_index].nativeElement.parentElement.children[0].checked == true) {
             this.s._results[category_index].nativeElement.parentElement.children[0].checked = false;
         }
@@ -140,7 +156,11 @@ export class SearchComponent {
             }
         }
 
+<<<<<<< HEAD
         if (sc.checked == true) {
+=======
+        if(subcategory.children[0].checked == true) {
+>>>>>>> 8aab7b3d571146cc2e9172696e283646ae5085fa
             this.Options.subcategory_ids.push({
                 id: id,
                 type: type,
@@ -148,17 +168,25 @@ export class SearchComponent {
                 user_category_id: user_category_id,
             });
         }
+<<<<<<< HEAD
         else {
             for (k in  this.Options.subcategory_ids) {
                 if (this.Options.subcategory_ids[k].id == id) {
+=======
+        else if(subcategory.children[0].checked == false) {
+            for(var k in this.Options.subcategory_ids){
+                if(this.Options.subcategory_ids[k].id == id){
+>>>>>>> 8aab7b3d571146cc2e9172696e283646ae5085fa
                     this.Options.subcategory_ids.splice(k, 1);
                 }
             }
         }
+<<<<<<< HEAD
 
         console.log(this.Options.subcategory_ids);
+=======
+>>>>>>> 8aab7b3d571146cc2e9172696e283646ae5085fa
         this.ExpenseServices.SearchReports(this.Options);
-
     }
 
 
