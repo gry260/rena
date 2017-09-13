@@ -27,15 +27,6 @@ export class SearchComponent {
 
     constructor(e: ExpenseService) {
         this.ExpenseServices = e;
-        this.Options = {
-            category_ids: [],
-            subcategory_ids: [],
-            name: '',
-            price: [],
-            last: '',
-            from: '',
-            end: '',
-        }
         this.DoneTypingInterval = 2000;
         this.SearchForm = new FormGroup({
             name: new FormControl(),
@@ -47,6 +38,16 @@ export class SearchComponent {
     }
 
     ngOnInit() {
+        this.Options = {
+            category_ids: [],
+            subcategory_ids: [],
+            name: '',
+            price: [],
+            last: '',
+            from: '',
+            end: '',
+        }
+
         if (this.isJson(this.parameters)) {
             this.p = JSON.parse(this.parameters);
             for (var k in this.p) {
@@ -80,24 +81,19 @@ export class SearchComponent {
     }
 
     OnClickUpdateCategory(category_id, user_category_id, index, ccategory_checkbox) {
-        if(this.Options.subcategory_ids.length > 0){
-            for(var k in this.Options.subcategory_ids){
-                if(this.Options.subcategory_ids[k].category_id !== undefined){
 
-                    if(this.Options.subcategory_ids[k].category_id == category_id){
-                          this.Options.subcategory_ids.splice(k, 1);
-                    }
-                }
-                else if(this.Options.subcategory_ids[k].user_category_id !== undefined){
-                    if(this.Options.subcategory_ids[k].user_category_id == user_category_id){
-                          this.Options.subcategory_ids.splice(k, 1);
+
+        var temp = this.Options.subcategory_ids;
+        if (ccategory_checkbox.checked == false) {
+            if (this.Options.subcategory_ids.length > 0) {
+                for (var i = this.Options.subcategory_ids.length - 1; i >= 0; i--) {
+                    if (this.Options.subcategory_ids[i].category_id == category_id) {
+
+                        this.Options.subcategory_ids.splice(i, 1);
                     }
                 }
             }
         }
-
-
-
 
         if (ccategory_checkbox.checked == true) {
             if (category_id !== undefined) {
@@ -125,11 +121,12 @@ export class SearchComponent {
             }
         }
 
-
         this.ExpenseServices.SearchReports(this.Options);
     }
 
-    OnCLickUpdateSubCategory(category_id, user_category_id, id, type, category_index) {
+    OnCLickUpdateSubCategory(category_id, user_category_id, id, type, category_index, sc) {
+
+
         if (this.s._results[category_index].nativeElement.parentElement.children[0].checked == true) {
             this.s._results[category_index].nativeElement.parentElement.children[0].checked = false;
         }
@@ -143,12 +140,21 @@ export class SearchComponent {
             }
         }
 
-        this.Options.subcategory_ids.push({
-            id: id,
-            type: type,
-            category_id: category_id,
-            user_category_id: user_category_id,
-        });
+        if (sc.checked == true) {
+            this.Options.subcategory_ids.push({
+                id: id,
+                type: type,
+                category_id: category_id,
+                user_category_id: user_category_id,
+            });
+        }
+        else {
+            for (k in  this.Options.subcategory_ids) {
+                if (this.Options.subcategory_ids[k].id == id) {
+                    this.Options.subcategory_ids.splice(k, 1);
+                }
+            }
+        }
 
         console.log(this.Options.subcategory_ids);
         this.ExpenseServices.SearchReports(this.Options);

@@ -7,10 +7,12 @@
  */
 
 $data = json_decode(file_get_contents('php://input'), true);
-$keys = array('category_ids', 'name', 'price', '');
 
-$q = 'SELECT * FROM chicheng.users_expense
-where user_id = 3 ';
+
+$keys = array('category_ids', 'name', 'price', '');
+$res = array();
+$q = 'SELECT * FROM chicheng.users_expense e
+where e.user_id = 3 ';
 if (!empty($data['category_ids']) && is_array($data['category_ids'])) {
     $q .= ' and (';
     foreach ($data['category_ids'] as $key => $val) {
@@ -18,24 +20,45 @@ if (!empty($data['category_ids']) && is_array($data['category_ids'])) {
         if ($val["type"] == "c") {
             $q .= ' e.category_id=' . $val["id"];
         }
+        else if ($val["type"] == "uc") {
+            $q .= ' e.user_category_id=' . $val["id"];
+        }
+        $res[] = $val["id"];
     }
     $q .= ')';
 }
 
+
+
+$l = false;
 if (!empty($data['subcategory_ids']) && is_array($data['subcategory_ids'])) {
     $q .= ' and (';
     foreach ($data['subcategory_ids'] as $key => $val) {
+        if(!empty($val['category_id']) && in_array($val['category_id'], $res)){
+            continue;
+        }
+        if(!empty($val['user_category_id']) && in_array($val['user_category_id'], $res)){
+            continue;
+        }
+
+        $l = true;
         $q .= $key != 0 ? ' or ' : false;
         $q .= '(';
-        $q .= $val["type"] == 'us' ? ' user_subcategory_id='.$val["id"] : false;
-        $q .= $val["type"] == 's' ? ' subcategory_id='.$val["id"] : false;
+        $q .= $val["type"] == 'us' ? ' e.user_subcategory_id='.$val["id"] : false;
+        $q .= $val["type"] == 's' ? ' e.subcategory_id='.$val["id"] : false;
         $q .= ' and ';
-        $q .= !empty($val['category_id']) ? ' category_id='.$val["category_id"] : false;
-        $q .= !empty($val['user_category_id']) ? ' user_category_id='.$val["user_category_id"] : false;
+        $q .= !empty($val['category_id']) ? ' e.category_id='.$val["category_id"] : false;
+        $q .= !empty($val['user_category_id']) ? ' e.user_category_id='.$val["user_category_id"] : false;
         $q .= ')';
     }
     $q .= ')';
+    if($l == false){
+        $q = substr($q, 0, -6);
+    }
 }
+
+
+echo $q;
 
 if (!empty($data['price']) && is_array($data['price'])) {
     $q .= ' and (';
@@ -86,5 +109,3 @@ if(!empty($data['end'])){
     $q .= ' and e.date <=' .$data['end'] ;
 }
 
-
-//echo $q;

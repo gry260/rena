@@ -18,8 +18,8 @@
         <input type="checkbox" #ccategory_checkbox (click)="OnClickUpdateCategory(item.category_id, item.user_category_id, i, ccategory_checkbox)" />
         {{ item.name }}
         <div *ngIf="p3[i]" #sc3>
-            <li *ngFor="let s of p3[i]; let j = index" style="margin-left: 50px;" #subcategory>
-                <input type="checkbox" (click)="OnCLickUpdateSubCategory(item.category_id, item.user_category_id,  s.id, s.type, i)"/>
+            <li *ngFor="let s of p3[i]; let j = index" style="margin-left: 50px;" >
+                <input type="checkbox"  #subcategory (click)="OnCLickUpdateSubCategory(item.category_id, item.user_category_id,  s.id, s.type, i, subcategory)"/>
                 {{s.name}}
             </li>
         </div>
@@ -88,6 +88,12 @@
 
 
 </form>
+
+<li *ngFor="let item of Options.subcategory_ids; let i = index">
+    {{ item.id }}
+
+</li>
+
 
 
 
