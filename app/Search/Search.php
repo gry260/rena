@@ -13,6 +13,26 @@
 
 -->
 
+
+
+<table border="1" *ngFor="let item of Reports; let i = index" style="margin-top:100px;">
+    <thead>
+        <tr>
+            <td colspan="2">{{item.name}}</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>Count</td>
+        </tr>
+    </thead>
+    <tbody *ngFor="let r of item.data; let j = index">
+        <tr>
+            <td>{{ r.name }}</td>
+            <td>{{ r.count }}</td>
+        </tr>
+    </tbody>
+</table>
+
 <form [formGroup]="SearchForm" #s="ngForm">
     <ul *ngFor="let item of p; let i = index" #category>
         <input type="checkbox" #ccategory_checkbox (click)="OnClickUpdateCategory(item.category_id, item.user_category_id, i, ccategory_checkbox)" />
@@ -85,14 +105,10 @@
     <input type="checkbox"/>
     Item Name
     -->
-
-
 </form>
 
-<li *ngFor="let item of Options.subcategory_ids; let i = index">
-    {{ item.id }}
 
-</li>
+
 
 
 

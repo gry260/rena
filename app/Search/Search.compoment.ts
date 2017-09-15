@@ -21,9 +21,8 @@ export class SearchComponent {
   TypingTimer: any;
   NameTypingTimer: any;
   ExpenseServices: ExpenseService;
-
   Options: any;
-  GroupOptions: any;
+  Reports = new Array();
 
   constructor(e: ExpenseService) {
     this.ExpenseServices = e;
@@ -81,7 +80,6 @@ export class SearchComponent {
   }
 
   OnClickUpdateCategory(category_id, user_category_id, index, ccategory_checkbox) {
-
     if (this.Options.subcategory_ids.length > 0) {
       for (var k in this.Options.subcategory_ids) {
         if (this.Options.subcategory_ids[k].category_id !== undefined) {
@@ -98,9 +96,6 @@ export class SearchComponent {
         }
       }
     }
-
-    
-
     if (ccategory_checkbox.checked == true) {
       if (category_id !== undefined) {
         this.Options.category_ids.push({type: "c", id: category_id});
@@ -126,15 +121,11 @@ export class SearchComponent {
         }
       }
     }
-
-    this.ExpenseServices.SearchReports(this.Options);
-
-
+    this.SearchReport(this.Options);
   }
 
 
-  OnCLickUpdateSubCategory(category_id, user_category_id, id, type, category_index, subcategory)
-  {
+  OnCLickUpdateSubCategory(category_id, user_category_id, id, type, category_index, subcategory) {
     if (this.s._results[category_index].nativeElement.parentElement.children[0].checked == true) {
       this.s._results[category_index].nativeElement.parentElement.children[0].checked = false;
     }
@@ -148,7 +139,7 @@ export class SearchComponent {
       }
     }
 
-    if(subcategory.checked == true){
+    if (subcategory.checked == true) {
       this.Options.subcategory_ids.push({
         id: id,
         type: type,
@@ -156,17 +147,26 @@ export class SearchComponent {
         user_category_id: user_category_id,
       });
     }
-    else{
+    else {
       for (var k in this.Options.subcategory_ids) {
         if (this.Options.subcategory_ids[k].id == id) {
           this.Options.subcategory_ids.splice(k, 1);
         }
       }
     }
-    return;
-
+    this.SearchReport(this.Options);
   }
 
+  SearchReport(options) {
+    this.Reports = new Array();
+    var Observables = this.ExpenseServices.SearchReports(options);
+    Observables.subscribe((res => {
+      var temp = res.json();
+      for (var k in temp) {
+        this.Reports.push({name: k, data: temp[k]});
+      }
+    }));
+  }
 
   OnClickUpdateName(name) {
     var that = this;
@@ -198,7 +198,7 @@ export class SearchComponent {
   }
 
   DoneTyping(e) {
-    e.SearchReports(this.Options);
+    this.SearchReport(this.Options);
   }
 
   OnChangeLastTime(value) {

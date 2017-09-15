@@ -31,25 +31,10 @@ export class ExpenseService {
 
   SearchReports(parameters): Observable<any>
   {
-
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
     let body = JSON.stringify(parameters);
-
-    return this.http.post('app/Search/SearchSubmit.php', body, options)
-      .map(res => {
-        res => res.text();
-        console.log(res.text());
-      }).subscribe(
-
-      );
-    //let bodyString = JSON.stringify(parameters); // Stringify payload
-    this.http.get('app/Search/SearchSubmit.php').map(res => {
-      res => res.text();
-      console.log(res.text());
-    }).subscribe(
-
-    );
+    return this.http.post('app/Search/SearchSubmit.php', body, options);
   }
 
   GetSubCategory(category_id, type) {
