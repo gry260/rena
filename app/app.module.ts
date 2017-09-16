@@ -12,15 +12,16 @@ import { ExpenseService } from "./services/expense";
 import { ExpenseComponent} from "./ExpenseType/Expense";
 import { ProfileComponent} from "./Users/Profile.components";
 import { SearchComponent } from "./Search/Search.compoment";
+import { AutoComplete} from "./ExpenseType/AutoComplete";
 
 import {UserService} from "./services/user";
 
 
 @NgModule({
     imports:      [ BrowserModule, ReactiveFormsModule, HttpModule],
-    declarations: [ AppComponent, CategoryComponent, SubCategoryComponent, ExpenseComponent, ProfileComponent, SearchComponent],
+    declarations: [ AppComponent, CategoryComponent, SubCategoryComponent, ExpenseComponent, ProfileComponent, SearchComponent, AutoComplete],
     bootstrap:    [ AppComponent],
-    providers: [ExpenseService, UserService, CategoryComponent, SubCategoryComponent, ExpenseComponent],
+    providers: [ExpenseService, UserService,  SubCategoryComponent, ExpenseComponent],
 })
 
 

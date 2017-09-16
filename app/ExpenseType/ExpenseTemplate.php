@@ -38,4 +38,11 @@
 
 
 
-{{IsUpdate}}
+<span [autoC]></span>
+
+<style>
+    .is-hover
+    {
+        background: green;
+    }
+</style>

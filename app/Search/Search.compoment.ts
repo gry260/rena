@@ -1,14 +1,13 @@
 import {Component, Input, Directive, Pipe, ElementRef, ViewChild, ViewChildren} from '@angular/core';
 import {FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
 import {ExpenseService} from "../services/expense";
-import {Book} from '../services/book';
+
 
 @Component({
   selector: 'search',
   templateUrl: 'app/Search/Search.php'
 })
 export class SearchComponent {
-
 
   @Input() parameters;
   SearchForm: any;

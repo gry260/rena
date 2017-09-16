@@ -1,4 +1,4 @@
-import {Component, Input, Output, Directive, EventEmitter} from '@angular/core';
+import {Component, Input, Output, Directive, EventEmitter, HostBinding} from '@angular/core';
 import {FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
 import {Http, Response} from '@angular/http';
 import {Injectable, ViewChild} from '@angular/core';
@@ -15,6 +15,7 @@ export class CategoryComponent {
   @Input() categories;
   @Input() usercategories;
   @Output() delete = new EventEmitter();
+  @HostBinding('class.test') isFavoriate = true;
 
   e: ExpenseService;
   s: SubCategoryComponent;
@@ -23,8 +24,6 @@ export class CategoryComponent {
   static listCategories: any;
   SubCategoryObj: any;
   UserCategoryArray: any;
-
-
   constructor(e: ExpenseService, s: SubCategoryComponent, h: Http) {
     this.s = s;
     this.e = e;
