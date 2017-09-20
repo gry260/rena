@@ -29,6 +29,14 @@ export class ExpenseService {
     this.http = h;
   }
 
+  GetCategoryKeyWords(cid) : Observable<any>
+  {
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    let body = JSON.stringify({'cid':cid});
+    return this.http.post('app/ExpenseType/ControllerActions.php', body, options);
+  }
+
   SearchReports(parameters): Observable<any>
   {
     let headers = new Headers({ 'Content-Type': 'application/json' });

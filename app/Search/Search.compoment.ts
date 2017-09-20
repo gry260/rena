@@ -10,12 +10,12 @@ import {ExpenseService} from "../services/expense";
 export class SearchComponent {
 
   @Input() parameters;
+  @ViewChildren('sc3') s: ElementRef;
   SearchForm: any;
   p = new Array();
   p2 = new Array();
   p3 = new Array();
   s: any;
-  @ViewChildren('sc3') s: ElementRef;
   DoneTypingInterval: number;
   TypingTimer: any;
   NameTypingTimer: any;

@@ -15,7 +15,6 @@ export class CategoryComponent {
   @Input() categories;
   @Input() usercategories;
   @Output() delete = new EventEmitter();
-  @HostBinding('class.test') isFavoriate = true;
 
   e: ExpenseService;
   s: SubCategoryComponent;

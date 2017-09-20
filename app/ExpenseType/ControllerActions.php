@@ -6,6 +6,7 @@
  * Time: 5:00 PM
  */
 
+$parameters = json_decode(file_get_contents('php://input'), true);
 require_once('../init.php');
 $loader->addNamespace('\Category', $_SERVER['DOCUMENT_ROOT'] . '/app/phpapp');
 $loader->loadClass("Db\DbLayer");
@@ -91,9 +92,24 @@ if(!empty($_GET['deleteusersubcategoryid'])){
   $u->DeleteSubCategory($id);
 }
 
-if(!empty($_GET['a'] == 'removeexpenseid')) {
+if(!empty($_GET['a']) && $_GET['a']  == 'removeexpenseid') {
   $id = trim($_GET['id']);
   $u = new \User\User();
   $u->RemoveExpense($id);
 }
+
+if(!empty($parameters['cid'])){
+  if(!preg_match('/^[0-9]+$/', $parameters['cid'])){
+    return;
+  }
+  else{
+    $cid = $parameters['cid'];
+    $loader->addNamespace('\Report', $_SERVER['DOCUMENT_ROOT'].'/app/phpapp');
+    $loader->loadClass("Report\Report");
+    $report = new \Report\Report(3, NULL);
+    echo json_encode($report->SearchCategoryKeywords($cid));
+  }
+}
+
+
 
